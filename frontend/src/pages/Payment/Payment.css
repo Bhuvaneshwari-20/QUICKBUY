@@ -1,0 +1,161 @@
+.payment-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 50px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-page h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+.qr-code {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.qr-code p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+.payment-method img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.payment-method p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.payment-method input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.payment-method input:focus {
+    border-color: tomato;
+}
+
+.payment-method button {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-method button:hover {
+    background-color: #e74c3c;
+}
+
+.card-payment-form {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.card-input-group {
+    margin-bottom: 15px;
+}
+
+.card-input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.card-input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.card-input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.card-input-row .card-input-group {
+    flex: 1;
+}
+
+.pay-now-btn {
+    width: 100%;
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.pay-now-btn:hover {
+    background-color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+    .payment-page {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .payment-method {
+        padding: 15px;
+    }
+
+    .card-input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

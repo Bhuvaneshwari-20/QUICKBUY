@@ -1,0 +1,13 @@
+{
+  "name": "food-del",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:admin": "cd admin && npm run dev -- --port 5174",
+    "dev:backend": "cd backend && npm start",
+    "dev:all": "concurrently \"npm run dev:frontend\" \"npm run dev:admin\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,228 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+
+/* Search and Filters */
+.food-filters {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 45px 12px 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff7e8b;
+}
+
+.clear-search {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-search:hover {
+    color: #ff7e8b;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 8px 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: #ff7e8b;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-inputs input {
+    width: 80px;
+}
+
+.price-inputs span {
+    color: #666;
+    font-weight: 500;
+}
+
+.clear-filters-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    align-self: end;
+}
+
+.clear-filters-btn:hover {
+    background: #d32f2f;
+    transform: translateY(-1px);
+}
+
+/* Results Info */
+.results-info {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.results-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Food Display List */
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+/* No Results */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-results p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.no-results button {
+    background: #ff7e8b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.no-results button:hover {
+    background: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .food-filters {
+        padding: 15px;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .price-inputs {
+        justify-content: space-between;
+    }
+
+    .price-inputs input {
+        width: 45%;
+    }
+
+    .clear-filters-btn {
+        align-self: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-display-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .search-bar {
+        margin-bottom: 15px;
+    }
+
+    .filter-controls {
+        gap: 15px;
+    }
+}

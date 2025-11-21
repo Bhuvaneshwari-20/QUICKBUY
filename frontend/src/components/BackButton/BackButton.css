@@ -1,0 +1,47 @@
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #ff7e8b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #ff6b6b;
+  transform: translateX(-2px);
+  box-shadow: 0 4px 12px rgba(255, 126, 139, 0.3);
+}
+
+.back-button:active {
+  transform: translateX(0);
+}
+
+.back-button svg {
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .back-button {
+    padding: 8px 12px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
